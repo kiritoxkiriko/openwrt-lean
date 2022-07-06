@@ -18,6 +18,9 @@ echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.defau
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # helloworld
-cd package/lean/  
-git clone https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
-git clone https://github.com/jerrykuku/luci-app-vssr.git  
+# git lua-maxminddb 依赖
+git clone https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb 
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
+
+# openclash
+git clone -b master --depth 1 https://github.com/vernesong/OpenClash.git package/luci-app-openclash
